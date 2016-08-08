@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Textfit</title>
+	<meta name="description" content="Fit a single line of text within it's container">
+
+	<style>
+		* {box-sizing:border-box;}
+		html, body {
+			width:100%;
+			min-height: 100%;
+			margin:0;
+		}
+		body {
+			background: linear-gradient(45deg, #83776a, #0f547f);
+			color:#fff;
+		}
+		.page {
+			padding:50px;
+			box-shadow:inset 0 0 0 10px #fff;
+			max-width:100%;
+			width:100vw;
+			height: 100vh;
+			overflow: auto;
+		}
+		.textfit {
+			line-height: 1.1em;
+		}
+		li {
+			font-family: sans-serif;
+			list-style: disc;
+			padding:5px 0;
+			-webkit-font-smoothing:antialiased;
+		}
+		.button {
+			background: #fff;
+			color:#83776a;
+			font-family: sans-serif;
+			font-size:20px;
+			padding:20px;
+			text-align: center;
+			display: block;
+			text-decoration:none;
+			transition:.5s;
+		}
+		.button:hover {
+			box-shadow:inset 0 0 2px 40px #83776a;
+			color:#fff;
+		}
+		xmp {
+			padding:5px;
+			display: inline-block;
+			margin:0;
+		}
+		@media (min-width: 800px) {
+			body {
+				height:100vh;
+				display: flex;
+				align-items:center;
+				justify-content: center;
+			}
+			.page {
+				width:800px;
+				height:800px;
+				margin:0 auto;
+			}
+		}
+	</style>
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="page">
+	<div>
+		<div class="textfit">
+		textfit.js
+		</div>
+
+		<div class="textfit" data-textfit-adjust=".98">
+		Fit text within its container
+		</div>
+
+		<ul>
+			<li>Include<xmp><script src="js/textfit.js"></script></xmp> after calling jQuery.</li>
+			<li>Apply a class of <xmp>textfit</xmp> to any element containing a single line of text.</li>
+			<li>Set <xmp>data-textfit-min="10px"</xmp> on the element to set an optional minimum size.</li>
+			<li>Set <xmp>data-textfit-max="60px"</xmp> on the element to set an optional maximum size.</li>
+			<li>Set <xmp>data-textfit-adjust="1"</xmp> on the element to tweak the scaling. 0 = invisible, 1 = normal, 2 = double size</li>
+		</ul>
+
+		<a href="https://github.com/kthornbloom/textfit" class="button">
+			GET IT ON GITHUB
+		</a>
+	</div>
+</div>
+
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="js/textfit.js"></script>
+</body>
+</html>
