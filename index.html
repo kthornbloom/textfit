@@ -89,15 +89,16 @@
 		Fit text within its container
 		</div>
 
+		Setup:
 		<ul>
-			<li>Include<xmp><script src="js/textfit.js"></script></xmp> after calling jQuery.</li>
-			<li>Apply a class of <xmp>textfit</xmp> to any element containing a single line of text.</li>
+			<li>Include <xmp><script src="js/textfit.js"></script></xmp> after calling jQuery.</li>
+			<li>Apply a class of <xmp>textfit</xmp> to any element containing a <b>single line</b> of text.</li>
 		</ul>
 		Optional:
 		<ul>
-			<li>Set <xmp>data-textfit-min="10px"</xmp> on the element to set a minimum size.</li>
-			<li>Set <xmp>data-textfit-max="60px"</xmp> on the element to set a maximum size.</li>
-			<li>Set <xmp>data-textfit-adjust="1"</xmp> on the element to tweak the scaling. 0 = invisible, 1 = normal, 2 = double size</li>
+			<li>Use <xmp>data-textfit-min="10"</xmp> on the element to set a minimum pixel size.</li>
+			<li>Use <xmp>data-textfit-max="60"</xmp> on the element to set a maximum pixel size.</li>
+			<li>If the text isn't fitting quit right, you can use <xmp>data-textfit-adjust=".95"</xmp> to tweak the scaling. 0 = Microscopic, 1 = Normal, 2 = Double</li>
 		</ul>
 
 		<a href="https://github.com/kthornbloom/textfit" class="button">
