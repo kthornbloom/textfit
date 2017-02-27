@@ -14,15 +14,15 @@ function textfit() {
 				adjust = $(this).data('textfit-adjust');
 		
 		if(adjust){ var newfontSize = newfontSize * adjust; }
-		console.log(newfontSize+' '+minFont);
+
 		if (newfontSize > maxFont) {
 			var newfontSize = maxFont
-			console.log('1');
 		} else if (newfontSize < minFont) {
 			var newfontSize = minFont
-			console.log('2');
 		}
+
 		$(this).css('font-size', newfontSize + 'px').find('.textfit-inner').contents().unwrap();
+
 	});
 }
 
